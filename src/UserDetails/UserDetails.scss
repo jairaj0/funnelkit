@@ -1,0 +1,65 @@
+
+.back{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    font-size: 40px;
+    color: #454545;
+    transition: all .3s ease-in-out;
+    background-color: #fff;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.ud{
+    padding-top: 5rem;
+    height: 100%;
+    .details{
+        display: grid;
+        max-width: 1300px;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        align-items: start;
+        margin-top: 2rem;
+        grid-gap: 2rem;
+        padding: 1rem;
+
+        @media screen and (max-width : 1300px) {
+            grid-gap: 1rem;
+        }
+        @media screen and (max-width : 1230px) {
+            grid-template-columns: 1fr 1fr;
+            .comp{
+                grid-column: 1 / 2 span;
+            }
+        }
+        @media screen and (max-width : 700px) {
+            grid-template-columns: 1fr  !important;
+            .box{
+                padding: 1rem !important;
+            }
+            .comp{
+                grid-column: 1 / 1 ;
+            }
+        }
+
+        .box{
+            border:  1px solid #ccc;
+            height: 100%;
+            padding: 2rem;
+            .row{
+                margin: .5rem 0;
+                h3{
+                    margin-right: 1rem;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                h4{
+                    margin: 0;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
